@@ -17,13 +17,12 @@ export function setCoordinate(
   return { x: x, y: y, o: o };
 }
 
-export function getCoordinate(): coordinate {
-  // get rover's coordinate
-
+export const getCoordinate = (): coordinate => {
+  // return rover's coordinate
   return myCoord;
-}
+};
 
-export function parseCommand(s: string): void {
+export const parseCommand = (s: string): void => {
   let myCoord = getCoordinate();
   switch (s) {
     case "L":
@@ -69,9 +68,9 @@ export function parseCommand(s: string): void {
     default:
       break;
   }
-}
+};
 
-function wrapAround(): void {
+const wrapAround = (): void => {
   switch (myCoord.o) {
     case "N":
       myCoord.o = "S";
@@ -86,9 +85,9 @@ function wrapAround(): void {
       myCoord.o = "E";
       break;
   }
-}
+};
 
-function moveRover(): void {
+const moveRover = (): void => {
   switch (myCoord.o) {
     case "N":
       myCoord.y += 1;
@@ -103,4 +102,4 @@ function moveRover(): void {
       myCoord.x -= 1;
       break;
   }
-}
+};

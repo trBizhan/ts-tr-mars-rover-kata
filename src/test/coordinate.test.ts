@@ -1,13 +1,10 @@
 import * as coord from "../coordinate";
-import { getCoordinate } from "../coordinate";
 
 interface coordinate {
   x: number; // x axis
   y: number; // y axis
   o: string; // orientation N, E, S, W
 }
-
-//type orientation = "N" | "E" | "S" | "W";
 
 describe("test get coordinate", () => {
   it("should return coordinate", () => {

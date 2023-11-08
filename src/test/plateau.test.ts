@@ -11,8 +11,6 @@ interface coordinate {
   o: string; // orientation N, E, S, W
 }
 
-//type orientation = "N" | "E" | "S" | "W";
-
 describe("test setting plateau shape", () => {
   it("should return x and y axis", () => {
     const result: plateau = { x: 5, y: 5 };
