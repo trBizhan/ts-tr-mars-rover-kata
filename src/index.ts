@@ -1,3 +1,3 @@
-import { add } from './calc';
+import * as coord from "./coordinate";
 
-console.log(`2 plus 2 is ${add(2, 2)}`);
+console.log(`The rover `);
