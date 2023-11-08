@@ -6,18 +6,6 @@ export interface coordinate {
   o: string; // orientation N, E, S, W
 }
 
-//export type orientation = "N" | "E" | "S" | "W";
-
-export const leftTurn = { N: "W", E: "N", S: "E", W: "S" };
-
-export const rightTurn = { N: "E", E: "E", S: "E", W: "E" };
-
-export interface instruction {
-  c: command;
-}
-
-export type command = "L" | "R" | "M";
-
 export let myCoord: coordinate = setCoordinate();
 
 export function setCoordinate(
