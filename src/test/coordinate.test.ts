@@ -4,14 +4,14 @@ import { getCoordinate } from "../coordinate";
 interface coordinate {
   x: number; // x axis
   y: number; // y axis
-  o: orientation; // orientation N, E, S, W
+  o: string; // orientation N, E, S, W
 }
 
-type orientation = "N" | "E" | "S" | "W";
+//type orientation = "N" | "E" | "S" | "W";
 
 describe("test get coordinate", () => {
   it("should return coordinate", () => {
-    const result: coordinate = { x: 0, y: 0, o: "N" };
+    const result: coordinate = { x: 1, y: 1, o: "N" };
     expect(coord.getCoordinate()).toEqual(result);
   });
 });

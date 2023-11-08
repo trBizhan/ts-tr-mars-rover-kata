@@ -8,10 +8,10 @@ interface plateau {
 interface coordinate {
   x: number; // x axis
   y: number; // y axis
-  o: orientation; // orientation N, E, S, W
+  o: string; // orientation N, E, S, W
 }
 
-type orientation = "N" | "E" | "S" | "W";
+//type orientation = "N" | "E" | "S" | "W";
 
 describe("test setting plateau shape", () => {
   it("should return x and y axis", () => {
@@ -20,8 +20,8 @@ describe("test setting plateau shape", () => {
   });
 });
 
-describe("test wrap around", () => {
-  it("should return new coordinate", () => {
-    expect(plat.checkWrapAround()).toBe(false);
+describe("test checkWrapArround", () => {
+  it("should return true if at the edge", () => {
+    expect(plat.checkWrapAround()).toBe(true);
   });
 });

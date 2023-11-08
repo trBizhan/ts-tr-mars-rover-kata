@@ -1,4 +1,5 @@
 import * as coord from "./coordinate";
+//import { myCoord } from "./coordinate";
 
 export interface plateau {
   x: number;
@@ -24,5 +25,18 @@ export function setPlateauShape(x: number, y: number): plateau {
 export function checkWrapAround(): boolean {
   // check if the Rover has reached the edge
 
-  return false;
+  let result: boolean = false;
+
+  switch (coord.myCoord.o) {
+    case "N":
+    case "S":
+      if (coord.myCoord.y > 0 && coord.myCoord.y < myPlateau.y) result = true;
+      break;
+    case "E":
+    case "W":
+      if (coord.myCoord.x > 0 && coord.myCoord.x < myPlateau.x) result = true;
+      break;
+  }
+
+  return result;
 }
