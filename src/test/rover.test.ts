@@ -1,10 +1,6 @@
 import { commandHandler } from "../rover";
 
-interface coordinate {
-  x: number; // x axis
-  y: number; // y axis
-  o: string; // orientation N, E, S, W
-}
+import { coordinate } from "../coordinate";
 
 describe("test rover", () => {
   it("should return coordinate", () => {

@@ -59,7 +59,7 @@ Assume plateau is 5 x 5 or n X n, a function to set plateau shape
 
 o is orientation, M is 1 unit of move, X is x axis, Y is y axis
 
-- x=0, y=0, o='N' bottom left corner, initialised start position
+- x=0, y=0, o='N' bottom left corner, initialised start position x = 1 y = 1 o = 'N'
 - x=5, y=0 bottom right corner
 - x=0, y=5 top left corner
 - x=5, y=5 top right corner
